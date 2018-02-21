@@ -5,7 +5,7 @@
   "googleimage":"https://images.google.com/",
   "testimage":"https://cdn.discordapp.com/attachments/309457977633538049/410511826216943616/image.jpg",
   "gggleaguelist":"http://api.pathofexile.com/leagues?type=main&compact=1",
-  "kiwitimeout":30000,
+  "kiwitimeout":1800000,
   "ninjalinks":[
     "http://api.poe.ninja/api/Data/GetDivinationCardsOverview",
     "http://api.poe.ninja/api/Data/GetCurrencyOverview",
