@@ -1,0 +1,17 @@
+{
+  "imagefiletypes":["jpg","gif","png","mp3","mp4"],
+  "colors":["red","orange","yellow","green","blue","indigo","purple","pink"],
+  "commonconnectorwords":["the","be","to","of","and","a","in","that","have","for","with"],
+  "googleimage":"https://images.google.com/",
+  "testimage":"https://cdn.discordapp.com/attachments/309457977633538049/410511826216943616/image.jpg",
+  "gggleaguelist":"http://api.pathofexile.com/leagues?type=main&compact=1",
+  "ninjalinks":[
+    "http://api.poe.ninja/api/Data/GetDivinationCardsOverview",
+    "http://api.poe.ninja/api/Data/GetCurrencyOverview",
+    "http://api.poe.ninja/api/Data/GetUniqueMapOverview",
+    "http://api.poe.ninja/api/Data/GetUniqueJewelOverview",
+    "http://api.poe.ninja/api/Data/GetUniqueFlaskOverview",
+    "http://api.poe.ninja/api/Data/GetUniqueWeaponOverview",
+    "http://api.poe.ninja/api/Data/GetUniqueArmourOverview",
+    "http://api.poe.ninja/api/Data/GetUniqueAccessoryOverview"]
+}

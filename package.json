@@ -1,0 +1,23 @@
+{
+  "name": "soup",
+  "version": "1.0.0",
+  "description": "utility/PoE discord bot",
+  "main": "app.js",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "discord.js": "^11.3.0",
+    "eslint": "^4.17.0",
+    "puppeteer": "^1.0.0",
+    "snekfetch": "^3.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "node.js"
+  ],
+  "author": "abcbadq",
+  "license": "ISC"
+}
