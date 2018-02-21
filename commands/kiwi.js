@@ -116,13 +116,10 @@ module.exports = {
         var outputsize = 5
         const sizerequest = parseInt(args[0])
         if (sizerequest > 0) {
-            if (sizerequest > 20) {
-                outputsize = 20
-            }
-            else {
-                outputsize = sizerequest
-            }
+            outputsize = sizerequest
         }
-        message.reply(culledcards.slice(0, outputsize).map(x => `${x.name} is worth ${x.value} c profit`))
+        for(var j=0;(1+j)*20<outputsize;j++){
+            message.reply(culledcards.slice((0+j)*20, (1+j)*20).map(x => `${x.name} is worth ${x.value} c profit`))
+        }
     }
 }
