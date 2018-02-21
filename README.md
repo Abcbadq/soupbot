@@ -1,0 +1,2 @@
+# soupbot
+PoE discord bot
