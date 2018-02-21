@@ -2,7 +2,7 @@ const resources = require("./resources.json")
 const snekfetch = require('snekfetch')
 
 module.exports = {
-    help: "!kiwi (update): Finds profit made from buying a div card",
+    help: "!kiwi (update, outuput line amount): Finds profit made from buying a div card.",
     run: async function (client, message, args, logger) {
 
         logger.info('!kiwi summoned')
@@ -97,6 +97,9 @@ module.exports = {
 
         if (!validcards || args[0] == 'update') {
             var validcards = update(alldivcard).filter(x => typeof x !== 'undefined')
+            setInterval(() =>{
+                validcards = undefined
+            },resources.kiwitimeout)
         }
 
         validcards = validcards.map((x) => {
@@ -113,7 +116,12 @@ module.exports = {
         var outputsize = 5
         const sizerequest = parseInt(args[0])
         if (sizerequest > 0) {
-            outputsize = sizerequest
+            if(sizerequest > 20){
+                outputsize = 20
+            }
+            else{
+                outputsize = sizerequest
+            }
         }
         message.reply(validcards.slice(0, outputsize).map(x => `${x.name} is worth ${x.value} c profit`))
     }
