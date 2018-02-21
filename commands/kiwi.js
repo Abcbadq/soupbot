@@ -97,32 +97,32 @@ module.exports = {
 
         if (!validcards || args[0] == 'update') {
             var validcards = update(alldivcard).filter(x => typeof x !== 'undefined')
-            setInterval(() =>{
+            setInterval(() => {
                 validcards = undefined
-            },resources.kiwitimeout)
+            }, resources.kiwitimeout)
         }
 
-        validcards = validcards.map((x) => {
+        var culledcards = validcards.map((x) => {
             return {
                 name: `${x.card.name} (${x.item.name})`,
                 value: parseFloat((x.item.cost * x.card.quantity - x.card.cost * x.card.stackSize) / x.card.stackSize).toFixed(2)
             }
         })
 
-        validcards = validcards.sort(function (a, b) {
+        culledcards = culledcards.sort(function (a, b) {
             return b.value - a.value
         })
 
         var outputsize = 5
         const sizerequest = parseInt(args[0])
         if (sizerequest > 0) {
-            if(sizerequest > 20){
+            if (sizerequest > 20) {
                 outputsize = 20
             }
-            else{
+            else {
                 outputsize = sizerequest
             }
         }
-        message.reply(validcards.slice(0, outputsize).map(x => `${x.name} is worth ${x.value} c profit`))
+        message.reply(culledcards.slice(0, outputsize).map(x => `${x.name} is worth ${x.value} c profit`))
     }
 }
